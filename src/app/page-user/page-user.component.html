@@ -1,0 +1,33 @@
+<h1>Profile</h1>
+
+<a href="{{gitHubUser.html_url}}" target="_blank">
+    <img width="260" height="260" src="{{gitHubUser.avatar_url}}" alt="">
+</a>
+
+
+<p>Nome: <a href="{{gitHubUser.html_url}}" target="_blank" >{{gitHubUser.name}}</a></p>
+<p>Número de seguidores: {{gitHubUser.followers}}</p>
+<p>Número de seguidos: {{gitHubUser.following}}</p>
+<p>e-mail: {{gitHubUser.email}}</p>
+<span style="white-space: pre-line">
+    Bio: {{gitHubUser.bio}}
+</span>
+
+<hr>
+
+<table border="1">
+    <thead>
+        <tr>
+            <td>id</td>
+            <td>Repositorio</td>        
+            <td>Estrelas</td>
+        </tr>        
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of gitHubUser.repositories" >
+            <td>{{item.id}}</td>
+            <td> <a href="{{item.html_url}}" target="_blank">{{item.name}}</a></td>        
+            <td>{{item.stargazers_count}}</td>
+        </tr>
+    </tbody>
+</table>

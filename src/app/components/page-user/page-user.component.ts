@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Repository } from '../models/GitHub/Repository';
-import { User } from '../models/GitHub/User';
-import { GitHubService } from '../services/github.service';
+import { User } from '../../models/GitHub/User';
+import { GitHubService } from '../../services/github.service';
 
 @Component({
   selector: 'app-page-user',

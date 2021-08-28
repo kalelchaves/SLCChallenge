@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { User } from '../models/GitHub/User';
-import { GitHubService } from '../services/github.service';
+import { User } from '../../models/GitHub/User';
+import { GitHubService } from '../../services/github.service';
 
 
 @Component({

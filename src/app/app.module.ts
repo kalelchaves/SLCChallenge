@@ -9,13 +9,17 @@ import { HttpClientModule } from '@angular/common/http';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { PageUserComponent } from './components/page-user/page-user.component';
 import { GitHubService } from './services/github.service';
+import { UserCardComponent } from './components/user-card/user-card.component';
+import { PageUsersListComponent } from './components/page-users-list/page-users-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchUserComponent,
     PageNotFoundComponent,
-    PageUserComponent
+    PageUserComponent,
+    UserCardComponent,
+    PageUsersListComponent
   ],
   imports: [
     BrowserModule,

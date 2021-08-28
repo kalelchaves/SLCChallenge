@@ -3,16 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{title}}</title>
   <base href="/">
 </head>
 <body>
-  <header>
-    <div>SLC Agrícola + GitHub Search</div>
-    <app-search-user (resultSearch)="onGetGithubUser($event)" ></app-search-user>
+  <header class="header">
+    <a href="" class="header-logo">SLC + GitHub</a>
+    <nav class="nav-header">
+      <app-search-user (resultSearch)="onGetGithubUser($event)" ></app-search-user>
+    </nav>    
   </header>
   
   <router-outlet></router-outlet>  
+
+  
 
 </body>
 </html>

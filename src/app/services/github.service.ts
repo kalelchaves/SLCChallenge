@@ -18,4 +18,8 @@ export class GitHubService{
         return this.httpClient.get(`${this.url}/users/${login}/repos`);
     }
 
+    getUsers(){
+        return this.httpClient.get(`${this.url}/users`);
+    }
+
 }

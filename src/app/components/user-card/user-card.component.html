@@ -1,0 +1,13 @@
+<a href="{{gitHubUser.html_url}}" target="_blank">
+    <img width="260" height="260" src="{{gitHubUser.avatar_url}}" alt="">
+</a>
+
+
+<p *ngIf="gitHubUser.name" >Nome: <a href="{{gitHubUser.html_url}}" target="_blank" >{{gitHubUser.name}}</a></p>
+<p *ngIf="gitHubUser.login" >Login: <a href="{{gitHubUser.html_url}}" target="_blank" >{{gitHubUser.login}}</a></p>
+<p *ngIf="gitHubUser.followers">Número de seguidores: {{gitHubUser.followers}}</p>
+<p *ngIf="gitHubUser.following">Número de seguidos: {{gitHubUser.following}}</p>
+<p *ngIf="gitHubUser.email">e-mail: {{gitHubUser.email}}</p>
+<span *ngIf="gitHubUser.bio" style="white-space: pre-line">
+    Bio: {{gitHubUser.bio}}
+</span>

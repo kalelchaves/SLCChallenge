@@ -28,6 +28,7 @@ export class PageUserComponent implements OnInit {
   getGitHubUser(login:string=''){
     this.gitHubService.getUser(login).subscribe((result) => {
       Object.assign(this.gitHubUser, result);
+
       this.gitHubService.getRepositories(login).subscribe((result) => {
         if(result && Array.isArray(result)){          
           this.gitHubUser.repositories.push(...Object.assign(result));
@@ -40,12 +41,13 @@ export class PageUserComponent implements OnInit {
       },(error) => {
 
       }, () => {
-        console.log(this.gitHubUser.repositories)
+        
       })
+
     }, (error) => {
 
     },() => {
-      console.log(this.gitHubUser);
+      
     })
   }
 

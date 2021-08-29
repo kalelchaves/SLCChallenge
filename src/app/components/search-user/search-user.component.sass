@@ -1,0 +1,61 @@
+@use '../../variables'
+
+button.nav-search-button
+    border: none
+    padding: 1.5rem
+    float: right    
+
+div.search-container-hide
+    display: none            
+
+div.search-container        
+    background-color: variables.$primary-color
+    opacity: 0.9
+    position: fixed
+    z-index: 1
+    width: 100%
+    height: 100%    
+    margin: 0
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    display: block
+    overflow-x: hidden
+    overflow-y: hidden        
+    form
+        position: fixed
+        top: 40%
+        left: 28%       
+        width: 50%         
+        input
+            &[type=text]            
+                width: 70%
+                border-radius: 5px
+                border: 0
+                font-size: 20px
+                font-style: italic            
+                color: variables.$primary-color
+                padding: 20px                                
+                float: left            
+        input::placeholder
+            color: variables.$primary-color
+        button        
+            background-color: #333333
+            color: variables.$button-text-color
+            width: 4.0rem
+            height: 4.0rem
+            margin-left: 10px
+            border-radius: 5px        
+            border: none            
+            font-size: 1.9rem
+
+button.nav-search-button    
+        background-color: variables.$primary-color
+        color: white
+        font-size: 20px
+        &:hover
+            color: variables.$tertiary-color
+            cursor: pointer
+    
+

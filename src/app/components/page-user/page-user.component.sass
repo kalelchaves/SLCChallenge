@@ -1,0 +1,40 @@
+@use '../../variables'
+
+    
+div.user-repository-row        
+    &:first-child
+        border: none
+    background-color: variables.$background-card-color                            
+    border-top: 1px
+    border-bottom: 0
+    border-left: 0
+    border-right: 0
+    border-color: variables.$secondary-color
+    border-style: solid    
+    position: relative
+    color: variables.$primary-color
+    div
+        padding: 20px
+        font-weight: bold  
+        i
+            font-size: 20px
+            margin-left: 10px            
+    .repository-title            
+        display: inline-block        
+        width: 70%     
+        margin-left: auto
+        padding-left: 10%
+        font-size: 30px
+    .repository-stars
+        display: inline-block            
+        font-size: 20px                
+    a
+        color: variables.$primary-color
+        text-decoration: inherit        
+        font-style: italic
+        transition: color 0.3s                              
+        &:hover
+            cursor: pointer
+            color: variables.$secondary-color
+            transition: color 0.3s                              
+        

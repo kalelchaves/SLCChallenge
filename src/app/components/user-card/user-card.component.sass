@@ -1,0 +1,56 @@
+@use '../../variables'
+@use '../../_mixins'  
+
+div.user-card-container            
+    background-color: variables.$background-card-color            
+    margin-bottom: 10px
+    padding: 2rem    
+    font-style: italic        
+    div.user-avatar   
+        display: inline-block     
+        padding-left: 5rem
+        width: 10%      
+        margin: 0        
+        img
+            width: 15rem
+            height: 15rem
+            border-radius: 150px        
+            border-width: 0                        
+    div.user-info
+        display: inline-block        
+        margin-left: 8rem        
+        max-width: 50%
+        a
+            text-decoration: inherit
+            color: variables.$primary-color
+            font-weight: bold       
+            transition: color 0.3s
+            &:hover                
+                color: #5FCF8C
+                cursor: pointer
+                transition: color 0.3s
+        ul
+            list-style-type: none
+            li                
+                color: variables.$primary-color
+                p
+                    i.icon
+                        margin-right: 10px
+                        font-size: 20px
+            li.user-card-name
+                p
+                    font-size: 40px
+
+div.page-full    
+    margin-bottom: 0
+    div.user-avatar                   
+        img
+            width: 18rem
+            height: 18rem
+            border-radius: 150px                                         
+            margin-left: -3rem
+            margin-right: auto            
+    div.user-info
+        display: inline-block        
+        margin-left: 10rem                
+        

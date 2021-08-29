@@ -1,13 +1,30 @@
-<a href="{{gitHubUser.html_url}}" target="_blank">
-    <img width="260" height="260" src="{{gitHubUser.avatar_url}}" alt="">
-</a>
-
-
-<p *ngIf="gitHubUser.name" >Nome: <a href="{{gitHubUser.html_url}}" target="_blank" >{{gitHubUser.name}}</a></p>
-<p *ngIf="gitHubUser.login" >Login: <a href="{{gitHubUser.html_url}}" target="_blank" >{{gitHubUser.login}}</a></p>
-<p *ngIf="gitHubUser.followers">Número de seguidores: {{gitHubUser.followers}}</p>
-<p *ngIf="gitHubUser.following">Número de seguidos: {{gitHubUser.following}}</p>
-<p *ngIf="gitHubUser.email">e-mail: {{gitHubUser.email}}</p>
-<span *ngIf="gitHubUser.bio" style="white-space: pre-line">
-    Bio: {{gitHubUser.bio}}
-</span>
+<div [ngClass]="{'user-card-container': true, 'page-full': pageFull}">
+    <div class="user-avatar">
+        <a href="{{gitHubUser.html_url}}" target="_blank">
+            <img src="{{gitHubUser.avatar_url}}" alt="">
+        </a>
+    </div>
+    <div class="user-info">
+        <ul>
+            <li class="user-card-name">
+                <p *ngIf="gitHubUser.name" ><a href="{{gitHubUser.html_url}}" target="_blank" >{{gitHubUser.name}}</a></p>
+                <span *ngIf="gitHubUser.bio" style="white-space: pre-line">
+                    {{gitHubUser.bio}}
+                </span>             
+            </li>
+            <li>
+                <p *ngIf="gitHubUser.login" ><i class="icon fas fa-user"></i> <a href="{{gitHubUser.html_url}}" target="_blank" >{{gitHubUser.login}}</a></p>
+            </li>
+            <li>
+                <p *ngIf="gitHubUser.followers"><i class="icon fas fa-users"></i> <strong>{{gitHubUser.followers}}</strong> seguidores - <i *ngIf="gitHubUser.following"><strong>{{gitHubUser.following}}</strong> seguidos</i>
+            </li>
+            <li>
+                
+            </li>
+            <li *ngIf="gitHubUser.email">
+                <p><i class="icon far fa-envelope"></i> {{gitHubUser.email}}</p>
+            </li>            
+        </ul>        
+    </div>    
+    
+</div>

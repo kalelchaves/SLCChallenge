@@ -1,2 +1,44 @@
-nav
-    background-color: red
+@use 'variables'
+@use 'mixins'
+
+*
+    padding: 0
+    margin: 0
+    top: 0
+    right: 0
+    left: 0    
+    font-family: variables.$font-family
+
+header
+    @include mixins.flex-center
+    top: 0
+    left: 0
+    margin:0 auto
+    background-color: variables.$primary-color
+    position: fixed
+    z-index: 1
+    padding: 10px
+    h1                       
+        a.header-logo            
+            background-image: url("../assets/logo.png")                        
+            margin: 0 auto
+            text-indent: -9999px                                                            
+            width: 150px
+            height: 56px                                      
+            background-size: cover  
+
+    .nav-header
+        padding-left: 60%
+
+div.container    
+    width: 80%
+    height: 100%
+    position: absolute
+    left: 0
+    right: 0
+    margin: auto        
+    opacity: 0.9    
+    margin-top: 8rem    
+
+
+            

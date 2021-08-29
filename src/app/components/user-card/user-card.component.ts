@@ -10,6 +10,7 @@ import { GitHubService } from 'src/app/services/github.service';
 export class UserCardComponent implements OnInit {
 
   @Input('user') gitHubUser:User = new User();
+  @Input('page-full') pageFull:boolean = false;
 
   constructor(private gitHubService:GitHubService) { }  
 

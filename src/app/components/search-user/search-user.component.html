@@ -1,4 +1,10 @@
-<form [formGroup]="searchForm" (ngSubmit)="onSearch()">    
-    <input type="text" placeholder="Informe o usuario" formControlName="search">
-    <button>Pesquisar</button>
-</form>
+<button (click)="hideContainer()" class="nav-search-button"><i class="fas fa-search"></i></button>
+<div [ngClass]="{'search-container-hide': hideContainerControl, 'search-container': !hideContainerControl}" >
+    <form [formGroup]="searchForm" (ngSubmit)="onSearch()">    
+        <div>
+            <input #searchField type="text" placeholder="Informe o usuario" formControlName="search">                        
+        </div>                        
+        <button><i class="fas fa-search"></i></button>
+        <button type="button"><i class="fas fa-times" (click)="hideContainer()" ></i></button>
+    </form>
+</div>

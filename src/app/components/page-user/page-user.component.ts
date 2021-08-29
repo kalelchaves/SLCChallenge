@@ -6,7 +6,7 @@ import { GitHubService } from '../../services/github.service';
 @Component({
   selector: 'app-page-user',
   templateUrl: './page-user.component.html',
-  styleUrls: ['./page-user.component.css']
+  styleUrls: ['./page-user.component.sass']
 })
 export class PageUserComponent implements OnInit {
 

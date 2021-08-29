@@ -1,3 +1,7 @@
-<div *ngFor="let user of gitHubusers">  
-    <app-user-card  [user]="user" ></app-user-card>
+<div class="users-list" *ngFor="let user of gitHubusers">  
+    <div class="user-card">
+        <app-user-card  [user]="user" ></app-user-card>
+    </div>    
 </div>
+
+

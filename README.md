@@ -1,27 +1,36 @@
-# MyApp
+# SLCChallenge
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.3.
+Projeto angular versão 12.2.3.
 
-## Development server
+Consome api do github e apresenta em um site.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Requisitos
+node 12.14.0
 
-## Code scaffolding
+npm 6.4.1
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+## Iniciar aplicação
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Necessário gerar um token para autenticação na api do github ver em (https://docs.github.com/en/rest/guides/getting-started-with-the-rest-api#authentication).
 
-## Running unit tests
+Adicionar o token gerado no arquivo enviroment.prod.ts e enviroment.ts.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Editar o arquivo .env encontrado na raiz e alterar para uma porta disponivel onde irá rodar o node server.
 
-## Running end-to-end tests
+Acessar a pasta SLCChallenge
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Executar os comandos
+```
+npm install
+npm run postInstall
+npm run start
+```
 
-## Further help
+## Para desenvolvimento
+Cumprir os requisitos acima
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Executar o comando
+```
+ng serve --open
+```

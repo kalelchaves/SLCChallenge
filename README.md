@@ -4,6 +4,8 @@ Projeto angular versão 12.2.3.
 
 Consome api do github e apresenta em um site.
 
+Um exemplo hospedado se encontra em: https://slc-challenge-kalel.herokuapp.com/
+
 ## Requisitos
 node 12.14.0
 

@@ -25,7 +25,6 @@ Acessar a pasta SLCChallenge
 Executar os comandos
 ```
 npm install
-npm run postInstall
 npm run start
 ```
 

@@ -6,20 +6,41 @@ div.user-card-container
     margin-bottom: 10px
     padding: 2rem    
     font-style: italic        
-    div.user-avatar   
+    @include mixins.mobile        
+        padding: 0
+        margin-left: auto
+        margin-left: auto
+        display: block        
+
+    div.user-avatar           
         display: inline-block     
         padding-left: 5rem
         width: 10%      
-        margin: 0        
+        margin: 0                            
         img
             width: 15rem
             height: 15rem
             border-radius: 150px        
-            border-width: 0                        
+            border-width: 0   
+            @include mixins.mobile
+                width: 10rem
+                height: 10rem                
+                left: 0
+                right: 0
+                margin: auto
+                position: absolute
+
+                    
     div.user-info
         display: inline-block        
         margin-left: 8rem        
         max-width: 50%
+        @include mixins.mobile
+            display: block
+            margin-top: 10rem            
+            margin: auto
+            padding-top: 10rem            
+
         a
             text-decoration: inherit
             color: variables.$primary-color
@@ -43,14 +64,26 @@ div.user-card-container
 
 div.page-full    
     margin-bottom: 0
-    div.user-avatar                   
+    div.user-avatar                  
         img
             width: 18rem
             height: 18rem
             border-radius: 150px                                         
             margin-left: -3rem
             margin-right: auto            
+            @include mixins.mobile            
+                width: 11rem
+                height: 11rem            
+                margin-left: auto
+                margin-right: auto                                               
+                display: block
     div.user-info
         display: inline-block        
         margin-left: 10rem                
+        @include mixins.mobile                        
+            margin-left: 0
+            display: block
+            margin-left: auto
+            margin-right: auto                                               
+
         

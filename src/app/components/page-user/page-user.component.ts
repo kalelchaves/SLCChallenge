@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { User } from '../../models/GitHub/User';
 import { GitHubService } from '../../services/github.service';
 
@@ -12,7 +12,8 @@ export class PageUserComponent implements OnInit {
 
   constructor(
     private gitHubService:GitHubService,
-    private route:ActivatedRoute
+    private route:ActivatedRoute,
+    private router:Router
     ) { }
 
   gitHubUser:User = new User();
@@ -27,6 +28,11 @@ export class PageUserComponent implements OnInit {
 
   getGitHubUser(login:string=''){
     this.gitHubService.getUser(login).subscribe((result) => {
+
+      if(!result){
+        this.router.navigate(['404']);
+      }
+
       Object.assign(this.gitHubUser, result);
 
       this.gitHubService.getRepositories(login).subscribe((result) => {
@@ -38,14 +44,14 @@ export class PageUserComponent implements OnInit {
             } else return -1;
           })
         }
-      },(error) => {
-
+      },(error) => {        
+        this.router.navigate(['404']);
       }, () => {
         
       })
 
     }, (error) => {
-
+      this.router.navigate(['404']);
     },() => {
       
     })

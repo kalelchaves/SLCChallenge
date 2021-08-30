@@ -1,6 +1,7 @@
 <button (click)="hideContainer()" class="nav-search-button"><i class="fas fa-search"></i></button>
-<div [ngClass]="{'search-container-hide': hideContainerControl, 'search-container': !hideContainerControl}" >
+<div [ngClass]="{'search-container-hide': hideContainerControl, 'search-container': !hideContainerControl}" >    
     <form [formGroup]="searchForm" (ngSubmit)="onSearch()">    
+        <h2>Informe um usuario do GitHub para pesquisa</h2>
         <div>
             <input #searchField type="text" placeholder="Informe o usuario" formControlName="search">                        
         </div>                        

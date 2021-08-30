@@ -1,8 +1,5 @@
-import { HttpClient } from '@angular/common/http';
-import { Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
+import { Component, ElementRef, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { User } from '../../models/GitHub/User';
-import { GitHubService } from '../../services/github.service';
 
 
 @Component({
@@ -13,29 +10,23 @@ import { GitHubService } from '../../services/github.service';
 export class SearchUserComponent implements OnInit {  
 
   @Output()
-  resultSearch: EventEmitter<User> = new EventEmitter<User>();
+  resultSearch: EventEmitter<string> = new EventEmitter<string>();
 
   @ViewChild('searchField') searchField: ElementRef = new ElementRef(undefined);
-  
-  gitHubUser:User = new User();
+    
   hideContainerControl:boolean = true;
 
   searchForm = new FormGroup({
     search: new FormControl('')
   });
 
-  constructor(private gitHubService:GitHubService) { }
+  constructor() { }
 
   ngOnInit(): void {
   }
 
   onSearch(){
-    this.gitHubService.getUser(this.searchForm.value.search).subscribe((result) => {
-      Object.assign(this.gitHubUser, result);
-      this.resultSearch.emit(this.gitHubUser);
-    }, (error) => {
-      this.resultSearch.emit(undefined);
-    })
+    this.resultSearch.emit(this.searchForm.value.search);    
   }
 
   hideContainer(){

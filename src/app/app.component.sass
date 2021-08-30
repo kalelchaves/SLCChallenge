@@ -10,25 +10,40 @@
     font-family: variables.$font-family
 
 header
-    @include mixins.flex-center
+    @include mixins.flex-center    
     top: 0
     left: 0
     margin:0 auto
     background-color: variables.$primary-color
     position: fixed
     z-index: 1
-    padding: 10px
-    h1                       
-        a.header-logo            
-            background-image: url("../assets/logo.png")                        
-            margin: 0 auto
-            text-indent: -9999px                                                            
-            width: 150px
-            height: 56px                                      
-            background-size: cover  
+    padding: 10px              
+    @include mixins.mobile            
+        width: 100%
+                
+    h1      
+        text-indent: -9999px                
+        background-image: url("../assets/logo.png")                        
+        background-size: 100%
+        background-position: center
+        width: 257px
+        height: 56px                                      
+        white-space: nowrap
+        background-size: cover              
+        a.header-logo                        
+            margin: 0 auto                                    
+            outline: none
+        
+        @include mixins.mobile            
+            width: 120px
+            height: 25px
+            padding: 0
 
     .nav-header
         padding-left: 60%
+        @include mixins.mobile            
+            padding: 0
+        
 
 div.container    
     width: 80%
@@ -39,6 +54,10 @@ div.container
     margin: auto        
     opacity: 0.9    
     margin-top: 8rem    
+    @include mixins.mobile
+        width: 425px        
+        margin-left: auto
+        margin-right: auto        
 
 
             

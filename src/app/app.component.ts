@@ -13,8 +13,7 @@ export class AppComponent implements OnInit {
   title="SLC Agrícola";
   githubUser:User = new User();  
 
-  constructor(
-    private router:Router){
+  constructor(private router:Router){
     
   }
 
@@ -22,10 +21,9 @@ export class AppComponent implements OnInit {
     
   }
 
-  onGetGithubUser(user:User){
-    if(user){
-      Object.assign(this.githubUser, user);
-      this.router.navigate(['user',this.githubUser.login]).then(() => window.top.location.reload())
+  onGetGithubUser(user:string){
+    if(user){      
+      this.router.navigate(['user',user]).then(() => window.top.location.reload())
     } else {
       console.log("erro");
       this.router.navigate(['404']);

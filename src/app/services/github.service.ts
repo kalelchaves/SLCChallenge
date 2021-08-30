@@ -5,7 +5,7 @@ import { Injectable } from "@angular/core";
 export class GitHubService{
 
     url:string = 'https://api.github.com';    
-    token:string='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'    
+    token:string='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'    
 
     constructor(private httpClient:HttpClient){
 
